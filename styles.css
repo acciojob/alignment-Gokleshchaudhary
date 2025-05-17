@@ -1,1 +1,69 @@
 /*  your css code here. If applicable */
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Common Table Styles */
+table {
+    border: 1px solid black;
+    border-spacing: 1px;
+    padding: 1px;
+    margin: 20px auto;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* Table Position */
+.middle {
+    margin: 0 auto;
+}
+
+/* Cell Alignment */
+.center td {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+/* Background Colors */
+.green {
+    background-color: green;
+    color: white;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
+
+/* Image Styling */
+#t-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Table Specific Styles */
+#table-1 {
+    min-width: 300px;
+}
+
+#table-2 {
+    min-width: 500px;
+}
+
+#table-3 {
+    min-width: 200px;
+}
+
+#t21 {
+    text-align: center;
+    background-color: #f0f0f0;
+}
