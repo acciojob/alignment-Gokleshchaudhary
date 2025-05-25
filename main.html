@@ -5,198 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Assignment 3</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-        }
-        
-        .middle {
-            margin: 20px auto;
-            border-collapse: collapse;
-            border-spacing: 1px;
-        }
-        
-        .middle td, .middle th {
+        table {
             border: 1px solid black;
+            border-spacing: 1px;
             padding: 1px;
-            min-width: 80px;
-            height: 40px;
-            vertical-align: middle;
         }
-        
-        .center {
-            text-align: center;
-        }
-        
-        .right {
-            text-align: right;
-        }
-        
         .green {
             background-color: green;
-            color: white;
         }
-        
         .blue {
             background-color: blue;
-            color: white;
         }
-        
-        .table-container {
-            margin: 40px 0;
-        }
-        
-        .table-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #555;
-        }
-        
-        .description {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        img {
-            max-width: 100px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+        .middle {
+            margin: auto;
         }
     </style>
 </head>
 <body>
-    <h1>HTML Assignment #3</h1>
+    <h1 style="text-align: center;">HTML Assignment #3</h1>
     
-    <div class="description">
-        <h2>Understanding HTML Tables</h2>
-        <p>HTML tables are used to display data in rows and columns. They consist of several key elements:</p>
-        <ul>
-            <li><strong>&lt;table&gt;</strong> - The container for the entire table</li>
-            <li><strong>&lt;tr&gt;</strong> - Table rows</li>
-            <li><strong>&lt;td&gt;</strong> - Table data cells</li>
-            <li><strong>&lt;th&gt;</strong> - Table header cells</li>
-        </ul>
-        <p>Tables can be styled with CSS and enhanced with attributes like colspan and rowspan for complex layouts.</p>
-    </div>
+    <!-- Table 1 -->
+    <table class="middle" id="table-1">
+        <tr>
+            <td id="t11">Cell 1</td>
+            <td id="t12">Cell 2</td>
+            <td id="t13">Cell 3</td>
+        </tr>
+        <tr>
+            <td class="center">Center Cell</td>
+            <td class="center">Center Cell</td>
+            <td class="right">Right Cell</td>
+        </tr>
+        <tr>
+            <td>Cell 4</td>
+            <td>Cell 5</td>
+            <td>Cell 6</td>
+        </tr>
+    </table>
 
-    <div class="table-container">
-        <div class="table-title">Table 1: Basic 3x3 Table with Classes and IDs</div>
-        <table id="table-1" class="middle">
-            <tr>
-                <td id="t11">Cell 1,1</td>
-                <td id="t12">Cell 1,2</td>
-                <td id="t13" class="right">Cell 1,3</td>
-            </tr>
-            <tr class="center">
-                <td>Cell 2,1</td>
-                <td>Cell 2,2</td>
-                <td class="right">Cell 2,3</td>
-            </tr>
-            <tr>
-                <td>Cell 3,1</td>
-                <td>Cell 3,2</td>
-                <td class="right">Cell 3,3</td>
-            </tr>
-        </table>
-    </div>
+    <!-- Table 2 -->
+    <table class="middle" id="table-2">
+        <tr>
+            <td id="t21" colspan="6">This is a single cell spanning 6 columns</td>
+        </tr>
+        <tr>
+            <td>Row 2, Col 1</td>
+            <td>Row 2, Col 2</td>
+            <td>Row 2, Col 3</td>
+            <td>Row 2, Col 4</td>
+            <td>Row 2, Col 5</td>
+            <td>Row 2, Col 6</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
 
-    <div class="table-container">
-        <div class="table-title">Table 2: 6x6 Table with Colspan</div>
-        <table id="table-2" class="middle">
-            <tr>
-                <td id="t21" colspan="6" class="center">Merged Header Cell (Colspan 6)</td>
-            </tr>
-            <tr>
-                <td>2,1</td>
-                <td>2,2</td>
-                <td>2,3</td>
-                <td>2,4</td>
-                <td>2,5</td>
-                <td>2,6</td>
-            </tr>
-            <tr>
-                <td>3,1</td>
-                <td>3,2</td>
-                <td>3,3</td>
-                <td>3,4</td>
-                <td>3,5</td>
-                <td>3,6</td>
-            </tr>
-            <tr>
-                <td>4,1</td>
-                <td>4,2</td>
-                <td>4,3</td>
-                <td>4,4</td>
-                <td>4,5</td>
-                <td>4,6</td>
-            </tr>
-            <tr>
-                <td>5,1</td>
-                <td>5,2</td>
-                <td>5,3</td>
-                <td>5,4</td>
-                <td>5,5</td>
-                <td>5,6</td>
-            </tr>
-            <tr>
-                <td>6,1</td>
-                <td>6,2</td>
-                <td>6,3</td>
-                <td>6,4</td>
-                <td>6,5</td>
-                <td>6,6</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="table-container">
-        <div class="table-title">Table 3: Table with Image and Colored Rows</div>
-        <table id="table-3" class="middle">
-            <tr class="green">
-                <td>Green Row</td>
-                <td>Header 1</td>
-                <td>Header 2</td>
-            </tr>
-            <tr>
-                <td>Data 1</td>
-                <td id="t-image">
-                    <img src="/placeholder.svg?height=60&width=80" alt="Sample Image">
-                </td>
-                <td>Data 3</td>
-            </tr>
-            <tr>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-            </tr>
-            <tr class="blue">
-                <td>Blue Row</td>
-                <td>Footer 1</td>
-                <td>Footer 2</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="description">
-        <h2>Table Features Demonstrated</h2>
-        <ul>
-            <li><strong>Table 1:</strong> Shows basic table structure with specific cell IDs and class-based styling for center alignment and right alignment</li>
-            <li><strong>Table 2:</strong> Demonstrates the use of colspan attribute to merge cells across multiple columns</li>
-            <li><strong>Table 3:</strong> Includes an image within a table cell and shows how to apply background colors to specific rows</li>
-        </ul>
-        <p>All tables use consistent styling with 1px solid black borders, 1px spacing, and 1px cell padding as specified.</p>
-    </div>
+    <!-- Table 3 -->
+    <table class="middle" id="table-3">
+        <tr class="green">
+            <td>Row 1</td>
+        </tr>
+        <tr>
+            <td id="t-image"><img src="your-image-url.jpg" alt="Image Description"></td>
+        </tr>
+        <tr class="blue">
+            <td>Row 3</td>
+        </tr>
+    </table>
 </body>
 </html>
